@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f7f2; /* Light green background color */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a936f; /* Dark green title color */
+    margin-bottom: 20px;
+  }
+  
+  .player-list {
+    margin-top: 20px;
+  }
+  
+  .player-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .player-name {
+    font-weight: bold;
+    color: #333; /* Dark text color */
+  }
+  
+  .team-name {
+    font-style: italic;
+    color: #555; /* Gray text color */
+  }
+  
+  .goals,
+  .assists,
+  .penalty-goals {
+    margin-top: 5px;
+  }
+  
+  .divider {
+    margin-top: 20px;
+  }
+  
+  
+  

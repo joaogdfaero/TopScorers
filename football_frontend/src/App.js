@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFutbolBall, faFlagCheckered } from '@fortawesome/free-solid-svg-icons';
+import './styles.css';
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -18,18 +21,22 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Top Scorers</h1>
-      <div>
+    <div className="container">
+      <h1 className="title">Top Scorers</h1>
+      <div className="player-list">
         {players.map((player, index) => {
           return (
-            <div key={index}>
-              <p>Player Name: {player.player_name}</p>
-              <p>Team Name: {player.team_name}</p>
-              <p>Goals: {player.goals}</p>
-              <p>Assists: {player.assists}</p>
-              <p>Penalty Goals: {player.penalty_goals}</p>
-              <hr />
+            <div className="player-card" key={index}>
+              <p className="player-name">Player Name: {player.player_name}</p>
+              <p className="team-name">Team Name: {player.team_name}</p>
+              <p className="goals">
+                <FontAwesomeIcon icon={faFutbolBall} /> Goals: {player.goals}
+              </p>
+              <p className="assists">Assists: {player.assists}</p>
+              <p className="penalty-goals">
+                <FontAwesomeIcon icon={faFlagCheckered} /> Penalty Goals: {player.penalty_goals}
+              </p>
+              <hr className="divider" />
             </div>
           );
         })}
