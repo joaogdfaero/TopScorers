@@ -16,7 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from topscorers.views import get_top_scorers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('topscorers/<int:league_id>/', get_top_scorers, name='get_top_scorers'),
 ]
+
+
+# from django.contrib import admin
+# from django.urls import path
+# from nextmatchapp.views import get_next_games
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('next-games/<time_id>/', get_next_games, name='get_next_games'),
+# ]
