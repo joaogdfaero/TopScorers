@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch('http://localhost:8000/topscorers/152/'); 
+        const response = await fetch('http://localhost:8000/topscorers/151/'); 
         const data = await response.json();
         setJsonData(JSON.stringify(data, null, 2)); 
       } catch (error) {
